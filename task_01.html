@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a1a1a;
+      color: #f4f4f4;
+    }
+    header {
+      background: #000;
+      color: #ffc107;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .buttons {
+      display: flex;
+      gap: 1em;
+    }
+    .btn {
+      background: #ffc107;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #e0a800;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1555992336-cf6c7bba5f53');
+      background-size: cover;
+      background-position: center;
+      padding: 6em 2em;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .section {
+      padding: 4em 2em;
+      text-align: center;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+    }
+    .card {
+      background: #292929;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 300px;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+    .stat {
+      background: #333;
+      padding: 1em 2em;
+      border-radius: 8px;
+    }
+    form input[type="email"] {
+      padding: 0.5em;
+      border: none;
+      width: 250px;
+      margin-right: 1em;
+      border-radius: 5px;
+    }
+    footer {
+      background: #111;
+      padding: 2em;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #ffc107;
+      margin: 0 1em;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .cards, .stats {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Foodie</h2>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Promo</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="buttons">
+    <button class="btn">Sign Up</button>
+    <button class="btn">Login</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Welcome to Foodie Heaven</h1>
+  <p>Delicious dishes delivered to your door</p>
+  <button class="btn">Order Now</button>
+</section>
+
+<section class="section">
+  <h2>Best Sellers</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Pizza"/>
+      <h3>Cheesy Pizza</h3>
+      <p>Hot and gooey with premium toppings.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Burger"/>
+      <h3>Big Burger</h3>
+      <p>Juicy patty and fresh ingredients.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Sushi"/>
+      <h3>Fresh Sushi</h3>
+      <p>Authentic taste from the East.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Burger"/>
+      <h3>Big Burger</h3>
+      <p>Juicy patty and fresh ingredients.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#222;">
+  <h2>Oriental Taste</h2>
+  <div class="card" style="margin:auto;">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Noodles"/>
+    <h3>Special Noodles</h3>
+    <p>Spiced just right, tastes just perfect.</p>
+    <button class="btn">Try Now</button>
+  </div>
+  
+</section>
+
+<section class="section">
+  <h2>Our Statistics</h2>
+  <div class="stats">
+    <div class="stat"><h3>123</h3><p>Outlets</p></div>
+    <div class="stat"><h3>100</h3><p>Chefs</p></div>
+    <div class="stat"><h3>300</h3><p>Menus</p></div>
+    <div class="stat"><h3>30</h3><p>Countries</p></div>
+  </div>
+</section>
+
+<section class="section" style="background:#333;">
+  <h2>Subscribe for Offers</h2>
+  <form>
+    <input type="email" placeholder="Enter your email" required />
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
+</section>
+
+<footer>
+  <p>
+    <a href="#">About</a> |
+    <a href="#">Services</a> |
+    <a href="#">Contact</a>
+  </p>
+  <p>Follow us on:
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a> |
+    <a href="#">Twitter</a>
+  </p>
+</footer>
+
+</body>
+</html>
